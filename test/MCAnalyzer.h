@@ -2,6 +2,7 @@
 #define MCAnalyzer_H
 
 #include "FWCore/Framework/interface/EDAnalyzer.h"
+#include<vector>
 
 // forward declarations
 class TFile;
@@ -20,7 +21,8 @@ class MCAnalyzer : public edm::EDAnalyzer
       virtual void analyze( const edm::Event&, const edm::EventSetup& ) ;
       virtual void beginJob( const edm::EventSetup& ) ;
       virtual void endJob() ;
-
+      int charge(const int&);
+      
    private:
    
      //
@@ -30,6 +32,14 @@ class MCAnalyzer : public edm::EDAnalyzer
      TH1D*       fHistmuPt ;
      TH1D*       fHistmuEta ;
      TH1D*       fHistmuPhi ;
+     TH1D*       fPtHat ;
+     TH1D*       fNPart ;
+     TH1D*       fNChPart ;
+     TH1D*       fProcessID ;
+     TH1D*       fPartID ;
+   
+     unsigned int         Nevt, Nhlt;
+     std::vector<unsigned int> Nall;
      
 };
 
