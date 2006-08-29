@@ -53,7 +53,7 @@ void MCAnalyzer::analyze( const Event& e, const EventSetup& )
      for (unsigned int i=0; i!= (*(trhv[0])).size(); i++) {
        if ( (*(trhv[0])).accept(i) ) {
 	 Nall[i]++;
-         if (i!=(*(trhv[0])).size()-1) hlt=true;
+         if (i<12) hlt=true;
        }
      }
      if (hlt) Nhlt++;
@@ -234,8 +234,8 @@ void MCAnalyzer::endJob()
    cout << endl;
    cout << "Trigger analysis:" << endl;
    cout << " Total number of events analysed: " << Nevt << endl;
-   cout << "  HLT triggers: all but the last" << endl;
-   cout << "  Generator selection: last one." << endl;
+   cout << "  HLT triggers: first 12." << endl;
+   cout << "  Generator selection (if present) and G4: rest." << endl;
    for (unsigned int i=0; i!=Nall.size(); i++) {
      cout << "   Trigger # " << i << " accepted: " << Nall[i] << endl;
    }
