@@ -1,0 +1,27 @@
+module bfilter = MCSingleParticleFilter {
+	untracked vint32 ParticleID = {5,-5}
+	untracked vdouble MinPt     = {0.0,0.0}
+	untracked vdouble MinEta    = {-20.0,-20.0}
+	untracked vdouble MaxEta    = {20.0,20.0}
+}
+
+
+module jpsifilter = PythiaFilter {
+	untracked int32 ParticleID = 443
+	untracked int32 Status     = 2
+	untracked double MinPt     = 0.0     
+	untracked double MinEta    = -20.0
+	untracked double MaxEta    = 20.0
+} 
+
+module mumufilter = MCParticlePairFilter {
+	untracked vint32 ParticleID1   = {13}
+	untracked vint32 ParticleID2   = {13}
+	untracked int32 ParticleCharge = -1
+	untracked vint32 Status        = {1,1}
+	untracked vdouble MinPt        = {2.0,2.0}
+	untracked vdouble MinEta       = {-2.5,-2.5}
+	untracked vdouble MaxEta       = {2.5,2.5}
+	untracked double MinInvMass    = 2.0
+	untracked double MaxInvMass    = 4.0
+} 

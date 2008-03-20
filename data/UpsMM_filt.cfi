@@ -1,0 +1,9 @@
+module  mumugenfilter  = MCParticlePairFilter {
+	untracked vint32 ParticleID1 = {13}
+	untracked vint32 ParticleID2 = {13}
+	untracked int32 ParticleCharge = 0
+	untracked vint32 Status = {1,1}
+	untracked vdouble MinPt = {2.0,2.0}
+	untracked vdouble MinEta = {-2.5,-2.5}
+	untracked vdouble MaxEta = {2.5,2.5}
+}
