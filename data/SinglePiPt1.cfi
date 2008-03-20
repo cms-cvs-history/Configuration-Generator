@@ -1,0 +1,17 @@
+source = FlatRandomPtGunSource 
+{ 
+  string psethack  = "single pi pt 1"	
+  untracked uint32 firstRun = 1
+  untracked PSet PGunParameters =
+  {
+    untracked vint32  PartID = {211}
+    untracked double MinEta = -5.0
+    untracked double MaxEta =  5.0
+    untracked double MinPhi = -3.14159265358979323846 # in radians
+    untracked double MaxPhi =  3.14159265358979323846
+    untracked double MinPt  =  0.99
+    untracked double MaxPt  =  1.01
+  }
+  untracked int32 Verbosity = 0 # set to 1 (or greater)  for printouts
+  untracked bool  AddAntiParticle = true
+}
