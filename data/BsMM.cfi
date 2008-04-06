@@ -1,3 +1,5 @@
+include "Configuration/Generator/data/PythiaUESettings.cfi"
+
 source = PythiaSource { 
 
   untracked int32 pythiaPylistVerbosity = 0
@@ -20,7 +22,7 @@ source = PythiaSource {
       "processParameters" 
     }
 
-    include "Configuration/Generator/data/PythiaUESettings.cfi"
+    using pythiaUESettingsBlock
 
     vstring processParameters = {
 

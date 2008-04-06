@@ -1,3 +1,6 @@
+include "GeneratorInterface/PyquenInterface/data/pyquenPythiaDefault.cfi"
+include "GeneratorInterface/HydjetInterface/data/hydjetSourceDefault.cfi"
+
 
 source = HydjetSource {
     # initialize pythia
@@ -9,11 +12,11 @@ source = HydjetSource {
         vstring parameterSets = {
                 "pythiaDefault"        # MSEL=1 (hard QCD dijets in) + hydjet needed initializations
                 }
-        include "GeneratorInterface/PyquenInterface/data/pyquenPythiaDefault.cfi"
+        using pyquenPythiaDefaultBlock
     }  
 
     # default hydjet parameters
-    include "GeneratorInterface/HydjetInterface/data/hydjetSourceDefault.cfi"
+    using hydjetSoureDefaultBlock
 }
 
 # whatever parameters from the hydjetSourceDefault you want to modify, do it following the exampels

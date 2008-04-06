@@ -1,3 +1,5 @@
+include "Configuration/Generator/data/PythiaUESettings.cfi"
+
 source = PythiaSource 
 { 
 untracked int32 pythiaPylistVerbosity = 1
@@ -17,7 +19,7 @@ PSet PythiaParameters = {
 	"processParameters"
     }
     
-    include "Configuration/Generator/data/PythiaUESettings.cfi"
+    using pythiaUESettingsBlock
     
     vstring processParameters = {
 	"PMAS(25,1)=120.0        !mass of Higgs",

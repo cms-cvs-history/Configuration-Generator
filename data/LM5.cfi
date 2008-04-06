@@ -1,3 +1,5 @@
+include "Configuration/Generator/data/PythiaUESettings.cfi"
+
 source = PythiaSource 
 { 
 untracked int32 pythiaPylistVerbosity = 0
@@ -18,7 +20,7 @@ PSet PythiaParameters = {
 	"SLHAParameters"
     }
     
-    include "Configuration/Generator/data/PythiaUESettings.cfi"
+    using pythiaUESettingsBlock
     
     vstring processParameters = {
 	"MSEL=39                  ! All SUSY processes ",
