@@ -1,31 +1,10 @@
-include "GeneratorInterface/PyquenInterface/data/pyquenPythiaDefault.cfi"
 include "GeneratorInterface/HydjetInterface/data/hydjetSourceDefault.cfi"
-
-
-source = HydjetSource {
-    # initialize pythia
-    PSet PythiaParameters = {
-        # This is a vector of ParameterSet names to be read, in this order
-        # They are  in the include files
-        # pythiaDefault HAS TO BE ALWAYS included
-        # If just the hard QCD dijets wanted, comment out the photons corresponding include and parameter set
-        vstring parameterSets = {
-                "pythiaDefault"        # MSEL=1 (hard QCD dijets in) + hydjet needed initializations
-                }
-        using pyquenPythiaDefaultBlock
-    }  
-
-    # default hydjet parameters
-    using hydjetSoureDefaultBlock
-}
 
 # whatever parameters from the hydjetSourceDefault you want to modify, do it following the exampels
 replace HydjetSource.bFixed        = 0.               # fixed impact param (fm); valid only if cflag_=0
-# replace HydjetSource.bMax          = 0.               # max impact param (fm)
-# replace HydjetSource.bMin          = 0.               # min impact param (fm)
 replace HydjetSource.cFlag         = 0                # centrality flag
                                                       # =  0 fixed impact param
-                                                      # <> 0 between bmin and bmax
+                                                      # <> 0 between bMin and bMax
 
 replace HydjetSource.nMultiplicity = 26000  #mean soft multiplicity in central PbPb
                                             #automatically calculated for other centralities and beams
