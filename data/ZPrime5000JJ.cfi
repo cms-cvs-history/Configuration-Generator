@@ -18,7 +18,7 @@ source = PythiaSource
 
       # Default (mostly empty - to keep PYTHIA default) card file
       # Name of the set is "pythiaDefault"
-      using pythiaUESettingsBlock
+      using pythiaDefaultBlock
 
       # User cards - name is "myParameters"
   vstring myParameters =
