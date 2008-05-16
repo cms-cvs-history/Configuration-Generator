@@ -1,4 +1,4 @@
-source = FlatRandomPtGunSource 
+source = FlatRandomEGunSource 
 { 
   string psethack  = "single pi E 1000"	
   untracked uint32 firstRun = 1
