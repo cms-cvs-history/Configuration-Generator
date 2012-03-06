@@ -1,4 +1,4 @@
-CBlock MASS   #
+Block MASS   #
 #  PDG code   mass                 particle
       1000021   500.0     # ~g
       1000993   500.700   # ~g_glueball
